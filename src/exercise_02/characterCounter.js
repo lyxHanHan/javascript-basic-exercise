@@ -10,7 +10,7 @@ export default function countCharacter(string, prediction) {
   if (string === '') { return 0; }
   if (prediction !== null) {
     const count = 0;
-    if (string.indexOf(prediction) !== -1)  { 
+    if (string.indexOf(prediction) !== -1) { 
       count++;
       countCharacter(string.substring(string.indexOf(prediction) + prediction.length()), prediction);
       return count; }
