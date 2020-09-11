@@ -7,16 +7,18 @@ export function range(start, end) {
   // * Please implement this function and pass all the tests in range_and_array_spec.js.
   // * Please do NOT modify the signature of the function.
 
-  const array = [];
-  if (start = end) {return '[]';}
-  for (start; start < end; start++) {
-    array.push(start);
-    return array;
+  const connect = [];
+  if (start < end) {
+    for (let i = start; i < end; i += 1) {
+      connect.push(i);
+    }
   }
-  for (start; start > end; start--) {
-    array.push(start);
-    return array;
+  if (start > end) {
+    for (let i = start; i > end; i -= 1) {
+      connect.push(i);
+    }
   }
+  return connect;
 }
 
 export function sum(...numbers) {
@@ -26,7 +28,9 @@ export function sum(...numbers) {
   //
   // * Please implement this function and pass all the tests in range_and_array_spec.js.
   // * Please do NOT modify the signature of the function.
-   const s = 0;
-   for (const i = 0; i < sum.length; i++){ s = s + sum[i];}
-   return s;
+  let s = 0;
+  for (let i = 0; i < sum.length; i += 1) { 
+    s += sum[i];
+  }
+  return s;
 }
