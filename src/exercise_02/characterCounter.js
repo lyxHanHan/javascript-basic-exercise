@@ -8,13 +8,14 @@ export default function countCharacter(string, prediction) {
 
   if (string == null || undefined) { return 0; }
   if (string === '') { return 0; }
-  if (prediction !== null) {
-    const count = 0;
-    if (string.indexOf(prediction) !== -1) { 
-      count++;
-      countCharacter(string.substring(string.indexOf(prediction) + prediction.length()), prediction);
-      return count; }
-    
+  if (prediction === undefined) {
     return string.length;
-  } 
+  }
+  let count = 0;
+  for (let i = 0; i < string.length; i += 1) {
+    if (prediction(string.charAt(i))) {
+      count += 1;
+    }
+  }
+  return count;
 }
