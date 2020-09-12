@@ -8,6 +8,5 @@ export default function waitForAll(...promises) {
   //
   // * Please implement this function and pass all the tests in wait_for_all_spec.js.
   // * Please do NOT modify the signature of the function.
-  if () => waitForAll(...notAllElementsArePromises)
   throw new Error('Not all elements are promises.');
 }
