@@ -7,7 +7,8 @@ export default function formatNumber(number, option) {
   //
   // * Please implement the function and pass all the tests in format_number_spec.js.
   // * Please do NOT modify the signature of the function.
-  const string = '$ ';
-  if (option === undefined) { return number.toFixed(2); }
-  return string + number.toFixed(2);
+  if (option === undefined || option.currency === false) {
+    return `${number.toFixed(2)}`;
+  }
+  return `$ ${number.toFixed(2)}`;
 }
